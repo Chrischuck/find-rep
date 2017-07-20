@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "preact": "^8.2.1"
+    "preact": "^8.2.1",
+    "preact-router": "^2.5.5",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "webpack": "^3.3.0",
