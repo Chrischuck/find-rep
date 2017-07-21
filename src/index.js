@@ -1,5 +1,9 @@
 /* eslint-disable */
 import { h, render } from 'preact';
-import App from './app'
+import { Provider } from 'preact-redux';
 
-render(<App />, document.getElementById('app'));
+import App from './app'
+import store from './store'
+
+
+render(<Provider store={store}><App /></Provider>, document.getElementById('app'));

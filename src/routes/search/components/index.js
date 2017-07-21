@@ -1,4 +1,8 @@
 import { h, render, Component } from 'preact';
+import { connect } from 'preact-redux';
+import { bindActions } from '../../../util';
+import reduce from '../../../reducer';
+import * as actions from '../../../actions';
 
 const styles = {
   parent: {
@@ -49,6 +53,7 @@ const styles = {
   },
 };
 
+@connect(reduce, bindActions(actions))
 class Search extends Component {
   constructor(props) {
     super(props);
@@ -57,6 +62,7 @@ class Search extends Component {
     };
   }
   render() {
+    console.log(this.props)
     return (
       <div style={styles.parent}>
         <div style={styles.child}>
@@ -65,7 +71,7 @@ class Search extends Component {
           </div>
           <div style={styles.inputWrapper}>
             <input placeHolder='Zip Code' style={styles.input} />
-            <i aria-hidden='true' className='fa fa-arrow-circle-right' style={styles.send} />
+            <span aria-hidden='true' className='fa fa-arrow-circle-right' style={styles.send} />
           </div>
         </div>
       </div>
