@@ -17,7 +17,9 @@ export function searchIncomplete(error) {
 
 export function search(zipCode) {
   return function(dispatch) {
-    return fetch('https://www.googleapis.com/civicinfo/v2/elections?key=AIzaSyBuMCc6qwjIkbKuc2nehvoODJXy-6yMc_4')
+    return fetch(
+      'https://www.googleapis.com/civicinfo/v2/representatives??key=AIzaSyBuMCc6qwjIkbKuc2nehvoODJXy-6yMc_4'
+    )
     .then(res => res.text())
     .then(body => dispatch(searchComplete(body)))
     .catch(error => dispatch(searchIncomplete(error)));
