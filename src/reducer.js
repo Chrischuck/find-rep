@@ -1,6 +1,7 @@
 
 const initialState = {
   officials: [],
+  error: null,
 };
 
 export default function reducer(state = initialState, action) {
