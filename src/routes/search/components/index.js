@@ -58,11 +58,19 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hi: 1,
+      zipCode: '',
     };
   }
+  onChange = e => {
+    this.setState({ zipCode: e.target.value });
+  }
+  search = e => {
+    e.preventDefault();
+    e.stopPropagation();
+    this.props.search(this.state.zipCode)
+    .then(() => this.props.history.push('/state-reps'));
+  }
   render() {
-    console.log(this.props)
     return (
       <div style={styles.parent}>
         <div style={styles.child}>
@@ -70,8 +78,8 @@ class Search extends Component {
             Enter a zip code to find your local rep!
           </div>
           <div style={styles.inputWrapper}>
-            <input placeHolder='Zip Code' style={styles.input} />
-            <span onClick={() => this.props.search('asdf')} aria-hidden='true' className='fa fa-arrow-circle-right' style={styles.send} />
+            <input placeHolder='Zip Code' style={styles.input} onChange={this.onChange} />
+            <span onClick={this.search} aria-hidden='true' className='fa fa-arrow-circle-right' style={styles.send} />
           </div>
         </div>
       </div>

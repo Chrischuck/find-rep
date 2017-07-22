@@ -1,5 +1,4 @@
 import { h, render, Component } from 'preact';
-import Router from 'preact-router';
 
 import './styles.css';
 
@@ -9,13 +8,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hi: 1,
+      pathname: this.props.history.location.pathname,
     };
+  }
+  componentDidMount() {
+    this.props.history.listen((location) => {
+      this.setState({ pathname: location.pathname });
+    });
   }
   render() {
     return (
       <div className='app'>
-        <SearchRoute />
+        { this.state.pathname === '/' || '' ? <SearchRoute {...this.props}/> : null}
       </div>
     );
   }
