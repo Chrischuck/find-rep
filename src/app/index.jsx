@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className='app'>
         
-        { this.state.pathname !== '/' || '' ? <SearchRoute {...this.props} /> : <RepRoute {...this.props} /> }
+        { this.state.pathname === '/' || '' ? <SearchRoute {...this.props} /> : <RepRoute {...this.props} /> }
       </div>
     );
   }
