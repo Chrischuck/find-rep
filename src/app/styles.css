@@ -93,6 +93,7 @@ h1 {
   color: #adb0bd;
   cursor: pointer;
   border-bottom: 0px;
+  transition: color 100ms linear;
 }
 .hover-icon:hover {
   color: white;

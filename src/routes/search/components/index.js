@@ -34,7 +34,6 @@ const styles = {
     color: '#c7c7c7',
   },
   send: {
-    color: 'rgba(255, 255, 255, 0.6)',
     cursor: 'pointer',
     position: 'absolute',
     top: '32%',
@@ -43,7 +42,6 @@ const styles = {
     fontSize: '25px',
     height: '25px',
     width: '25px',
-    transition: 'color 100ms linear',
   },
 };
 
@@ -55,16 +53,24 @@ class Search extends Component {
       zipCode: '',
     };
   }
-  onChange = e => {
+  onInput = e => {
     this.setState({ zipCode: e.target.value });
   }
   search = e => {
+    console.log('state', this.state.zipCode)
     e.preventDefault();
     e.stopPropagation();
     this.props.search(this.state.zipCode)
     .then(() => this.props.history.push('/state-reps'));
   }
+  handleKeyPress = target => {
+    if (target.charCode === 13) {
+      this.props.search(this.state.zipCode)
+      .then(() => this.props.history.push('/state-reps'));   
+    }
+  }
   render() {
+    console.log(this.state)
     return (
       <div className='search-route-wrapper'>
         <div style={styles.child}>
@@ -72,8 +78,8 @@ class Search extends Component {
             Enter a zip code to find your local rep!
           </div>
           <div style={styles.inputWrapper}>
-            <input placeHolder='Zip Code' style={styles.input} onChange={this.onChange} />
-            <span onClick={this.search} aria-hidden='true' className='fa fa-arrow-circle-right' style={styles.send} />
+            <input onInput={this.onInput} onKeyPress={this.handleKeyPress} value={this.state.zipCode} placeHolder='   Zip Code' style={styles.input} />
+            <a onClick={this.search} aria-hidden='true' className='hover-icon fa fa-arrow-circle-right' style={styles.send} />
           </div>
         </div>
       </div>
