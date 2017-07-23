@@ -5,12 +5,6 @@ import reduce from '../../../reducer';
 import * as actions from '../../../actions';
 
 const styles = {
-  parent: {
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   child: {
     maxWidth: '50%',
     maxHeight: '50%',
@@ -72,7 +66,7 @@ class Search extends Component {
   }
   render() {
     return (
-      <div style={styles.parent}>
+      <div className='search-route-wrapper'>
         <div style={styles.child}>
           <div style={{ color: 'white', fontSize: '20px', fontWeight: '300', fontFamily: 'Lato' }}>
             Enter a zip code to find your local rep!

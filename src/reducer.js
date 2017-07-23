@@ -5,10 +5,10 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-  const { type, payload } = action
+  const { type, payload } = action;
   switch (type) {
     case 'SEARCH':
-      return { officials: 'asdfasf' };
+      return { officials: payload };
 
     default:
       return state;

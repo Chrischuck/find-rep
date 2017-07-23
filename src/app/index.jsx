@@ -3,6 +3,7 @@ import { h, render, Component } from 'preact';
 import './styles.css';
 
 import SearchRoute from '../routes/search/components';
+import RepRoute from '../routes/rep/components';
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +20,8 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        { this.state.pathname === '/' || '' ? <SearchRoute {...this.props}/> : null}
+        
+        { this.state.pathname !== '/' || '' ? <SearchRoute {...this.props} /> : <RepRoute {...this.props} /> }
       </div>
     );
   }

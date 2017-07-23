@@ -1,4 +1,87 @@
+body {
+  font-family: lato
+}
+a {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+  font-family: lato;
+}
+h3 {
+  font-weight: 300
+}
+h2 {
+  font-weight: 300
+}
+h1 {
+  font-weight: 300
+}
+
 .app {
   background-color: #2b313c;
   height: 100%
+}
+
+.search-route-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rep-route-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.profile-pic-wrapper {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.img-name-wrapper {
+  flex-direction: row;
+  display: -webkit-flex;
+  justify-content: center;
+}
+.social-wrapper {
+  flex-direction: row;
+  display: -webkit-flex;
+  justify-content: space-around;
+}
+.contact-wrapper {
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  justify-content: center;
+}
+
+.profile-card {
+  max-height: 350px;
+  border-radius: 5px;
+  width: calc(400px);
+  margin: 0 auto;
+  min-height: 20px;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  background-color: #333959;
+  border: 0px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  margin-top: 15vh;
+}
+
+.hover-icon {
+  color: #adb0bd;
+  cursor: pointer;
+}
+.hover-icon:hover {
+  color: white;
 }

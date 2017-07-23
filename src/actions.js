@@ -4,7 +4,7 @@ export function searchComplete(data) {
   const jsonData = JSON.parse(data);
   return {
     type: 'SEARCH',
-    officials: jsonData.officials,
+    payload: jsonData.officials,
   };
 }
 
