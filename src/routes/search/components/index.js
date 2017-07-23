@@ -57,7 +57,6 @@ class Search extends Component {
     this.setState({ zipCode: e.target.value });
   }
   search = e => {
-    console.log('state', this.state.zipCode)
     e.preventDefault();
     e.stopPropagation();
     this.props.search(this.state.zipCode)
@@ -70,7 +69,6 @@ class Search extends Component {
     }
   }
   render() {
-    console.log(this.state)
     return (
       <div className='search-route-wrapper'>
         <div style={styles.child}>
