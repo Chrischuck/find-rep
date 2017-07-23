@@ -5,16 +5,16 @@ import Socials from './socials';
 const Profile = ({ official }) =>
   <div className='profile-card'>
     <div className='img-name-wrapper'>
+      <div>
       <div className='profile-pic-wrapper'>
         <img src={official.photoUrl} style={{ width: 'inherit', height: 'inherit', borderRadius: 'inherit' }}/>
+      </div>
+          <Socials socials={official.channels} />
       </div>
       <div style={{ marginLeft: '20px' }}>
         <h1>{ official.name }</h1>
         <h3>{ `${official.party} Party` }</h3>
       </div>
-    </div>
-    <div className='social-wrapper' style={{ width: '50%', fontSize: '23px' }}>
-      <Socials socials={official.channels} />
     </div>
     <div className='contact-wrapper'>
       <h2 style={{ marginBottom: '0px' }}>Contact Info</h2>

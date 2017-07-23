@@ -9,30 +9,6 @@ const styles = {
     maxWidth: '50%',
     maxHeight: '50%',
   },
-  inputWrapper: {
-    marginTop: '20px',
-    maxWidth: '336px',
-    height: '50px',
-    fontSize: '16px',
-    lineHeight: '16px',
-    width: '100%',
-    position: 'relative',
-  },
-  input: {
-    width: '100%',
-    height: '100%',
-    marginRight: '35px',
-    fontSize: '15px',
-    lineHeight: '15px',
-    borderBottomColor: '#825acb',
-    borderRadius: '5px',
-    boxShadow: 'inset 0 2px 5px rgba(0,0,0,.2)',
-    outline: 'none',
-    fontWeight: '300',
-    backgroundColor: '#211f21',
-    border: '1px solid #171717',
-    color: '#c7c7c7',
-  },
   send: {
     cursor: 'pointer',
     position: 'absolute',
@@ -75,8 +51,8 @@ class Search extends Component {
           <div style={{ color: 'white', fontSize: '20px', fontWeight: '300', fontFamily: 'Lato' }}>
             Enter a zip code to find your local rep!
           </div>
-          <div style={styles.inputWrapper}>
-            <input onInput={this.onInput} onKeyPress={this.handleKeyPress} value={this.state.zipCode} placeHolder='   Zip Code' style={styles.input} />
+          <div className='search-box-wrapper' style={styles.inputWrapper}>
+            <input className='search-box' onInput={this.onInput} onKeyPress={this.handleKeyPress} value={this.state.zipCode} placeHolder='Zip Code' />
             <a onClick={this.search} aria-hidden='true' className='hover-icon fa fa-arrow-circle-right' style={styles.send} />
           </div>
         </div>

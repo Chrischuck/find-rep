@@ -62,9 +62,9 @@ h1 {
   justify-content: center;
 }
 .social-wrapper {
-  flex-direction: row;
-  display: -webkit-flex;
-  justify-content: space-around;
+  font-size: 26px;
+  margin-top: 10px;
+  text-align: center;
 }
 .contact-wrapper {
   flex-wrap: wrap;
@@ -103,4 +103,29 @@ h1 {
   .link-fonts {
     font-size: 4vw;
   }
+}
+.search-box-wrapper {
+    margin-top: 20px;
+    max-width: 336px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 16px;
+    width: 100%;
+    position: relative;
+}
+.search-box {
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    margin-right: 35px;
+    font-size: 15px;
+    line-height: 15px;
+    border-bottom-color: #825acb;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,.2);
+    outline: none;
+    font-weight: 300;
+    background-color: #211f21;
+    border: 1px solid #171717;
+    color: #c7c7c7;
 }

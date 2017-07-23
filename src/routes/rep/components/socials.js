@@ -2,7 +2,7 @@ import { h, render, Component } from 'preact';
 
 const Socials = ({ socials = [] }) => {
   return (
-      <div>
+      <div className='social-wrapper' style={{ textAlign: 'center' }}>
         {
           socials.map((social) => {
             switch (social.type) {
