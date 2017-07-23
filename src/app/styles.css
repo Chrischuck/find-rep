@@ -1,5 +1,6 @@
 html {
   background-color: #2b313c;
+  overflow-y: scroll;
 }
 body {
   font-family: lato
@@ -8,21 +9,28 @@ a {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
   color: white;
   text-decoration: none;
-  font-weight: 200;
+  font-weight: 300;
   font-family: lato;
 }
+
+h4 {
+  font-weight: 300;
+  margin-bottom: 0px;
+}
 h3 {
-  font-weight: 300
+  font-weight: 300;
+  margin-bottom: 0px;
 }
 h2 {
-  font-weight: 300
+  font-weight: 300;
+  margin-bottom: 0px;
 }
 h1 {
-  font-weight: 300
+  font-weight: 300;
 }
 
 .app {
-  height: 100%
+  height: 100%;
 }
 
 .search-route-wrapper {
@@ -39,7 +47,6 @@ h1 {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  align-content: center;
 }
 .profile-pic-wrapper {
   display: inline-block;
@@ -70,7 +77,7 @@ h1 {
   border-radius: 5px;
   width: calc(400px);
   margin: 0 auto;
-  min-height: 20px;
+  min-height: 350px;
   padding-top: 40px;
   padding-bottom: 25px;
   padding-left: 20px;
@@ -89,4 +96,10 @@ h1 {
 }
 .hover-icon:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  .link-fonts {
+    font-size: 4vw;
+  }
 }

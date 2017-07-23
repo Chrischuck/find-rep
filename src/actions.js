@@ -19,7 +19,7 @@ export function searchIncomplete(error) {
 export function search(zipCode) {
   return function(dispatch) {
     return fetch(
-      `https://www.googleapis.com/civicinfo/v2/representatives?address=${zipCode}&roles=legislatorUpperBody&key=AIzaSyBuMCc6qwjIkbKuc2nehvoODJXy-6yMc_4`
+      `https://www.googleapis.com/civicinfo/v2/representatives?address=${zipCode}&roles=legislatorUpperBody&roles=legislatorLowerBody&key=AIzaSyBuMCc6qwjIkbKuc2nehvoODJXy-6yMc_4`
     )
     .then(res => res.text())
     .then(body => dispatch(searchComplete(body)))

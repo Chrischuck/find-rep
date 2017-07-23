@@ -8,13 +8,6 @@ import Profile from './profile';
 
 @connect(reduce, bindActions(actions))
 class RepPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      zipCode: '',
-    };
-  }
-
   render() {
     console.log(this.props.officials);
     const { officials = [] } = this.props;

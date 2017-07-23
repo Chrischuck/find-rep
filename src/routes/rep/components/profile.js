@@ -18,9 +18,9 @@ const Profile = ({ official }) =>
     </div>
     <div className='contact-wrapper'>
       <h2 style={{ marginBottom: '0px' }}>Contact Info</h2>
-      <p style={{width: '100%'}}>{`${official.address[0].line1}, ${official.address[0].city}, ${official.address[0].state} ${official.address[0].zip}`}</p>
-      <p style={{width: '100%'}}>Phone Number: <a href={`tel:${official.phones[0]}`}>{official.phones[0]}</a></p>
-      <p style={{width: '100%'}}>Website: <a href={official.urls[0]} target='_blank'>{official.urls[0]}</a></p>
+      <h3 style={{width: '100%'}}>{`${official.address[0].line1}, ${official.address[0].city}, ${official.address[0].state} ${official.address[0].zip}`}</h3>
+      <h3 style={{width: '100%'}}>{'Phone Number: '}<a className='link-fonts' href={`tel:${official.phones[0]}`}>{official.phones[0]}</a></h3>
+      <h3 style={{width: '100%'}}>{'Website: '}<a className='link-fonts' href={official.urls[0]} target='_blank'>{official.urls[0]}</a></h3>
     </div>
   </div>;
 
