@@ -6,18 +6,10 @@ import * as actions from '../../../actions';
 
 const styles = {
   child: {
-    maxWidth: '50%',
+    maxWidth: '100%',
     maxHeight: '50%',
-  },
-  send: {
-    cursor: 'pointer',
-    position: 'absolute',
-    top: '32%',
-    bottom: '50%',
-    right: '1px',
-    fontSize: '25px',
-    height: '25px',
-    width: '25px',
+    marginRight: '10px',
+    marginLeft: '10px',
   },
 };
 
@@ -53,7 +45,7 @@ class Search extends Component {
           </div>
           <div className='search-box-wrapper' style={styles.inputWrapper}>
             <input className='search-box' onInput={this.onInput} onKeyPress={this.handleKeyPress} value={this.state.address} placeHolder='Address' />
-            <a onClick={this.search} aria-hidden='true' className='hover-icon fa fa-arrow-circle-right' style={styles.send} />
+            <a onClick={this.search} aria-hidden='true' className='send-button hover-icon fa fa-arrow-circle-right' />
           </div>
         </div>
       </div>
