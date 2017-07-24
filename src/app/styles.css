@@ -99,6 +99,14 @@ h1 {
   color: white;
 }
 
+.link-fonts {
+  cursor: pointer;
+}
+
+.link-fonts:hover {
+  color: white;
+}
+
 @media (max-width: 768px) {
   .link-fonts {
     font-size: 5vw;
