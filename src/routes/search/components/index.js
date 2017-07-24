@@ -32,8 +32,11 @@ class Search extends Component {
   }
   handleKeyPress = target => {
     if (target.charCode === 13) {
-      this.props.search(this.state.address)
-      .then(() => this.props.history.push('/state-reps'));   
+      setTimeout(() =>
+        this.props.search(this.state.address)
+        .then(() => this.props.history.push('/state-reps')),
+        25
+      );  
     }
   }
   render() {

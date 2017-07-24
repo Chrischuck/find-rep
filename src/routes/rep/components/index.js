@@ -9,7 +9,6 @@ import Profile from './profile';
 @connect(reduce, bindActions(actions))
 class RepPage extends Component {
   render() {
-    console.log(this.props.officials);
     const { officials = [] } = this.props;
     return (
       <div className='rep-route-wrapper'>

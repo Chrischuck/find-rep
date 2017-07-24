@@ -14,7 +14,6 @@ class App extends Component {
   }
   componentDidMount() {
     this.props.history.listen((location) => {
-      console.log(location.pathname)
       this.setState({ pathname: location.pathname });
     });
   }
