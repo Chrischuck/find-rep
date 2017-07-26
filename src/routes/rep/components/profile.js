@@ -3,7 +3,7 @@ import { h, render, Component } from 'preact';
 import Socials from './socials';
 
 const Profile = ({ official }) =>
-  <div className='profile-card'>
+  <div className='profile-card' style={{ marginLeft: '2vw', marginRight: '2vw' }}>
     <div className='img-name-wrapper'>
       <div>
       <div className='profile-pic-wrapper'>

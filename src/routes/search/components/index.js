@@ -19,24 +19,37 @@ class Search extends Component {
     super(props);
     this.state = {
       address: '',
+      error: null,
     };
   }
   onInput = e => {
     this.setState({ address: e.target.value });
   }
+  getData = () => {
+    this.props.search(this.state.address)
+    .then(data => {
+      if (!data.error) {
+        this.props.history.push('/state-reps');
+      } else {
+        if (data.error.code === 'Z_DATA_ERROR') {
+          this.setState({ error: 'Invalid Address' });
+        } else if (data.error.code === undefined) {
+          this.setState({ error: 'No Internet Connection' });
+        } else {
+          this.setState({ error: 'Uh oh! Something went wrong' });
+        }
+      }
+    });
+  }
+
   search = e => {
     e.preventDefault();
     e.stopPropagation();
-    this.props.search(this.state.address)
-    .then(() => this.props.history.push('/state-reps'));
+    this.getData();
   }
   handleKeyPress = target => {
     if (target.charCode === 13) {
-      setTimeout(() =>
-        this.props.search(this.state.address)
-        .then(() => this.props.history.push('/state-reps')),
-        25
-      );  
+      setTimeout(this.getData, 25);
     }
   }
   render() {
@@ -45,6 +58,9 @@ class Search extends Component {
         <div style={styles.child}>
           <div style={{ color: 'white', fontSize: '20px', fontWeight: '300', fontFamily: 'Lato' }}>
             Enter an address to find your local rep!
+          </div>
+          <div style={{ color: '#da0000', fontSize: '16px', fontWeight: '300', fontFamily: 'Lato' }}>
+            { this.state.error }
           </div>
           <div className='search-box-wrapper' style={styles.inputWrapper}>
             <input className='search-box' onInput={this.onInput} onKeyPress={this.handleKeyPress} value={this.state.address} placeHolder='Address' />

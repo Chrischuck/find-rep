@@ -42,7 +42,6 @@ h1 {
 }
 
 .rep-route-wrapper {
-  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -80,9 +79,9 @@ h1 {
   min-height: 350px;
   padding-top: 40px;
   padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 20px;
+  padding-left: 17px;
+  padding-right: 17px;
+  margin-bottom: 0px;
   background-color: #054A91;
   border: 0px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
@@ -113,7 +112,7 @@ h1 {
   }
 }
 .search-box-wrapper {
-    margin-top: 20px;
+    margin-top: 15px;
     height: 50px;
     font-size: 16px;
     line-height: 16px;
