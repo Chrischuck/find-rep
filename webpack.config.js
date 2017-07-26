@@ -4,8 +4,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var Dashboard = require('webpack-dashboard');
 var DashboardPlugin = require('webpack-dashboard/plugin');
-var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-
 
 var dashboard = new Dashboard();
 
@@ -74,7 +72,6 @@ module.exports = {
       template: './index.html',
       inject: true
     }),
-
     new ExtractTextPlugin("styles.css")
   ]
 }

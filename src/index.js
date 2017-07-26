@@ -5,6 +5,7 @@ import createHistory from 'history/createBrowserHistory'
 
 import App from './app'
 import store from './store'
+import favicon from './assets/favicon-32x32.png'
 
 const history = createHistory()
 

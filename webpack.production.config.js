@@ -34,9 +34,9 @@ module.exports = {
       { test: /\.woff2/, loader: 'url-loader?mimetype=application/font-woff2' },
       { test: /\.svg$/, loader: "svg-loader?limit=10000&mimetype=image/svg+xml" },
       { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
+      { test: /\.ico$/, loader: "url-loader?limit=100000" },
       { test: /\.(jpe?g|png)$/i, loaders: [
-            'file-loader?hash=sha512&digest=hex',
-            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            'file-loader?name=favicon.png',
         ] },
       { test: /manifest.json$/, loader: 'file-loader?name=manifest.json!web-app-manifest-loader' },
       {
