@@ -49,7 +49,7 @@ class Search extends Component {
   }
   handleKeyPress = target => {
     if (target.charCode === 13) {
-      setTimeout(this.getData, 25);
+      setTimeout(this.getData, 35);
     }
   }
   render() {
